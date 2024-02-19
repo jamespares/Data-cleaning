@@ -18,6 +18,7 @@ Cleaning the 'country' Column:
 
 Identify Inconsistencies: Display unique values in the 'country' column to reveal variations in capitalization, punctuation, and abbreviations.
 Lowercase and Trim: Convert values to lowercase with .str.lower() and remove trailing whitespace with .str.strip().
+
 Standardisation:
 Create a mapping dictionary (country_mapping) to replace variants with consistent country names (e.g., 'uk' -> 'united kingdom').
 Apply the mapping using .replace() .
@@ -25,14 +26,17 @@ Remove Missing/Empty Values: Handle missing or empty country entries with .dropn
 Calculating 'days_ago':
 
 Convert data type: Ensure the 'date_measured' column is in datetime format using pd.to_datetime().
+
 Calculate Difference: Subtract 'date_measured' from the current date (datetime.date.today()) to find the difference in days. Convert to a new column 'days_ago'.
-Result:
+
+**Result:**
 
 The cleaned dataset now has:
 
 Consistent country names, aiding in accurate grouping and analysis.
 A 'days_ago' column, enabling time-based exploration of income patterns.
-Usage:
+
+**Usage:**
 
 This preprocessed data is ready for downstream analysis such as:
 
